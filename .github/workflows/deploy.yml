@@ -3,7 +3,7 @@ name: Deploy Serverless Function
 on:
   push:
     branches:
-      - main  # Change if you want another branch to trigger deployment
+      - master  
 
 jobs:
   deploy:
@@ -36,3 +36,4 @@ jobs:
           AWS_REGION: ${{ secrets.AWS_REGION }}
           SERVERLESS_ACCESS_KEY: ${{ secrets.SERVERLESS_ACCESS_KEY }}
         run: sls deploy --stage prod
+
